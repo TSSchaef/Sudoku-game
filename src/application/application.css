@@ -1,0 +1,96 @@
+.root{
+	-fx-background-color: #111112;
+}
+
+.button{
+	-fx-background-color: #666666;
+	-fx-font-size: 20.0;
+	-fx-font-family: "Georgia";
+	-fx-text-fill: #b8b8b8;
+	-fx-alignment: center;
+}
+.label{
+	-fx-font-size: 25.0;
+	-fx-font-family: "Georgia";
+	-fx-text-fill: #b8b8b8;
+	-fx-background-color: #111112;
+	-fx-alignment: center;
+}
+.text-field{
+	-fx-background-color: #666666;
+	-fx-text-fill: #b8b8b8;
+	-fx-font-family: "Georgia";
+	-fx-font-size: 18.0;
+	-fx-padding: 0,0,1,0;
+	-fx-border-width: 2;
+	-fx-alignment: center;
+	-fx-border-radius: 2;
+
+}
+.combo-box-popup .list-view {
+    -fx-background-color: #666666, #666666;
+    -fx-background-insets: 0, 1;}    
+    
+.combo-box .list-cell {
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: #b8b8b8;
+    -fx-padding: 3 0 2 2;
+    -fx-cell-size: 1.66667em; 
+} 
+
+.combo-box-popup .list-view .list-cell {
+    -fx-padding: 4 0 0 4 ;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 18.0;
+    -fx-background-color: #666666;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #666666;
+    -fx-text-fill: #b8b8b8;
+}
+.combo-box {
+	-fx-font-family: "Georgia";
+	-fx-font-size: 18.0;
+}
+.combo-box-base {
+    -fx-background-color: #666666;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-padding: 0;
+}
+.check-box .box {
+    -fx-background-color: #666666;
+}
+.check-box {
+	-fx-font-size: 18.0;
+	-fx-font-family: "Georgia";
+	-fx-text-fill: #666666;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: black;
+}
+
+.check-box:selected .box {
+    -fx-background-color: white;
+}
+#myLabel{
+	-fx-font-size: 30.0;
+	-fx-background-color: #111112;
+}
+#myButton{
+	-fx-font-size: 48.0;
+}
+#credits {
+	-fx-font-size: 18.0;
+	-fx-font-style: italic;
+}
+#title{
+	-fx-font-size: 64.0;
+	-fx-background-color: #111112;
+}
+#horzLine{
+	-fx-fill: #b8b8b8
+}

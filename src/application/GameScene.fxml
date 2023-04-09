@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SudokuController">
+   <children>
+      <Separator layoutX="118.0" layoutY="222.0" prefHeight="7.0" prefWidth="362.0" />
+      <Separator layoutX="118.0" layoutY="346.0" prefHeight="7.0" prefWidth="362.0" />
+      <Separator layoutX="233.0" layoutY="110.0" orientation="VERTICAL" prefHeight="354.0" prefWidth="7.0" />
+      <Separator layoutX="364.0" layoutY="110.0" orientation="VERTICAL" prefHeight="354.0" prefWidth="7.0" />
+      <TextField fx:id="box00" layoutX="119.0" layoutY="113.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box10" layoutX="154.0" layoutY="113.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box20" layoutX="189.0" layoutY="113.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box01" layoutX="119.0" layoutY="148.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box11" layoutX="154.0" layoutY="148.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box21" layoutX="189.0" layoutY="148.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box02" layoutX="119.0" layoutY="183.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box12" layoutX="154.0" layoutY="183.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box22" layoutX="189.0" layoutY="183.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box30" layoutX="251.0" layoutY="113.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box40" layoutX="286.0" layoutY="113.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box50" layoutX="321.0" layoutY="113.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box31" layoutX="251.0" layoutY="148.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box41" layoutX="286.0" layoutY="148.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box51" layoutX="321.0" layoutY="148.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box32" layoutX="251.0" layoutY="183.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box42" layoutX="286.0" layoutY="183.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box52" layoutX="321.0" layoutY="183.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box60" layoutX="382.0" layoutY="113.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box70" layoutX="417.0" layoutY="113.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box80" layoutX="452.0" layoutY="113.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box61" layoutX="382.0" layoutY="148.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box71" layoutX="417.0" layoutY="148.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box81" layoutX="452.0" layoutY="148.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box62" layoutX="382.0" layoutY="183.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box72" layoutX="417.0" layoutY="183.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box82" layoutX="452.0" layoutY="183.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box03" layoutX="119.0" layoutY="239.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box13" layoutX="154.0" layoutY="239.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box23" layoutX="189.0" layoutY="239.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box04" layoutX="119.0" layoutY="274.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box14" layoutX="154.0" layoutY="274.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box24" layoutX="189.0" layoutY="274.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box05" layoutX="119.0" layoutY="309.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box15" layoutX="154.0" layoutY="309.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box25" layoutX="189.0" layoutY="309.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box33" layoutX="251.0" layoutY="239.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box43" layoutX="286.0" layoutY="239.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box53" layoutX="321.0" layoutY="239.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box34" layoutX="251.0" layoutY="274.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box44" layoutX="286.0" layoutY="274.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box54" layoutX="321.0" layoutY="274.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box35" layoutX="251.0" layoutY="309.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box45" layoutX="286.0" layoutY="309.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box55" layoutX="321.0" layoutY="309.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box63" layoutX="382.0" layoutY="239.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box73" layoutX="417.0" layoutY="239.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box83" layoutX="452.0" layoutY="239.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box64" layoutX="382.0" layoutY="274.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box74" layoutX="417.0" layoutY="274.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box84" layoutX="452.0" layoutY="274.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box65" layoutX="382.0" layoutY="309.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box75" layoutX="417.0" layoutY="309.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box85" layoutX="452.0" layoutY="309.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box06" layoutX="119.0" layoutY="361.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box16" layoutX="154.0" layoutY="361.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box26" layoutX="189.0" layoutY="361.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box07" layoutX="119.0" layoutY="396.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box17" layoutX="154.0" layoutY="396.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box27" layoutX="189.0" layoutY="396.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box08" layoutX="119.0" layoutY="431.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box18" layoutX="154.0" layoutY="431.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box28" layoutX="189.0" layoutY="431.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box36" layoutX="251.0" layoutY="361.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box46" layoutX="286.0" layoutY="361.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box56" layoutX="321.0" layoutY="361.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box37" layoutX="251.0" layoutY="396.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box47" layoutX="286.0" layoutY="396.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box57" layoutX="321.0" layoutY="396.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box38" layoutX="251.0" layoutY="431.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box48" layoutX="286.0" layoutY="431.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box58" layoutX="321.0" layoutY="431.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box66" layoutX="382.0" layoutY="361.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box76" layoutX="417.0" layoutY="361.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box86" layoutX="452.0" layoutY="361.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box67" layoutX="382.0" layoutY="396.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box77" layoutX="417.0" layoutY="396.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box87" layoutX="452.0" layoutY="396.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box68" layoutX="382.0" layoutY="431.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box78" layoutX="417.0" layoutY="431.0" prefHeight="26.0" prefWidth="28.0" />
+      <TextField fx:id="box88" layoutX="452.0" layoutY="431.0" prefHeight="26.0" prefWidth="28.0" />
+      <Button fx:id="pause" layoutX="259.0" layoutY="583.0" mnemonicParsing="false" onAction="#pause" text="Pause">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="hint" layoutX="136.0" layoutY="583.0" mnemonicParsing="false" onAction="#hint" text="Hint">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button layoutX="393.0" layoutY="583.0" mnemonicParsing="false" text="Undo">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Label fx:id="TimerBox" alignment="CENTER" layoutX="-9.0" layoutY="509.0" prefHeight="18.0" prefWidth="616.0" text="" />
+      <Label fx:id="messages" layoutX="-9.0" layoutY="59.0" prefHeight="18.0" prefWidth="616.0" text="Label" />
+   </children>
+</AnchorPane>
