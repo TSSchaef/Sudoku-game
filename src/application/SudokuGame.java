@@ -1,10 +1,13 @@
 package application;
 
 import java.util.Random;
+import java.util.Stack;
 
 public class SudokuGame {
 	
 	public final static int GRID_SIZE = 9;
+	
+	private Stack<char[][]> history = new Stack<char[][]>();
 	
 	private char[][] completeArr = new char[GRID_SIZE][GRID_SIZE];
 	private char[][] givenArr = new char[GRID_SIZE][GRID_SIZE];
@@ -36,7 +39,7 @@ public class SudokuGame {
 				
 		for(int i = 0; i < GRID_SIZE; i++) {
 			for(int j = 0; j < GRID_SIZE; j++) {	
-				int curr = (rand.nextInt(1, 10));
+				int curr = (rand.nextInt(1, GRID_SIZE + 1));
 				attempts = 0;
 				completeArr[i][j] = (char)(curr + '0');	
 				
@@ -63,8 +66,8 @@ public class SudokuGame {
 		Random rand = new Random();
 		rand.setSeed(System.currentTimeMillis());
 		while(numToRemove > 0) {
-			int x = rand.nextInt(0, 9);
-			int y = rand.nextInt(0, 9);
+			int x = rand.nextInt(0, GRID_SIZE);
+			int y = rand.nextInt(0, GRID_SIZE);
 			
 			if(givenArr[x][y] != '\0') {
 				givenArr[x][y] = '\0';
@@ -73,9 +76,16 @@ public class SudokuGame {
 		}
 	}
 	
-	//TO DO private boolean alternateSolutionExists(char[][] puzzle)
+	/*TO DO private boolean alternateSolutionExists(char[][] puzzle)
 	{
 		//sudoku solver, redo recursively(?)
+	}
+	*/
+	
+	public void undo() {
+		if(!history.empty()) {
+			Utility.copyTo(currentArr, history.pop());
+		}
 	}
 	
 	private int setPuzzleConditions(String difficulty)
@@ -105,7 +115,12 @@ public class SudokuGame {
 	}
 	
 	public void updateCurrentArr(int i, int j, char c)
-	{
+	{	
+		char[][] saveState = new char [GRID_SIZE][GRID_SIZE];
+		Utility.copyTo(saveState, currentArr);
+		history.add(saveState);
+		lastUpdated[0] = i;
+		lastUpdated[1] = j;
 		currentArr[i][j] = c;
 	}
 	
@@ -126,7 +141,7 @@ public class SudokuGame {
 		Random rand = new Random();	
 		rand.setSeed(System.currentTimeMillis());
 		
-		
+		//check if puzzle is solved
 		boolean puzzleFinished = true;
 		outerloop:
 		for(int i = 0; i < GRID_SIZE; i++) {

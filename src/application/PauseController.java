@@ -59,8 +59,8 @@ public class PauseController{
 		root = loader.load();
 	
 		SudokuController gameController = loader.getController();
-		
 		gameState.restartGame();
+		
 		if(Time >= 0){
 			gameController.setupPuzzle(gameState, 0);
 		}else {
@@ -79,14 +79,17 @@ public class PauseController{
 	{
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("GameScene.fxml"));
 		root = loader.load();
-	
-		SudokuController gameController = loader.getController();
-		gameState = new SudokuGame(gameState.getDifficulty());
-		if(Time >= 0){
-			gameController.setupPuzzle(gameState, 0);
-		}else{
-			gameController.setupPuzzle(gameState, -1);
-		}
+		
+		new Thread( ()->{
+			SudokuController gameController = loader.getController();
+			gameState = new SudokuGame(gameState.getDifficulty());
+			if(Time >= 0){
+				gameController.setupPuzzle(gameState, 0);
+			}else{
+				gameController.setupPuzzle(gameState, -1);
+			}
+		}).start();
+		
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		String css = this.getClass().getResource("application.css").toExternalForm();

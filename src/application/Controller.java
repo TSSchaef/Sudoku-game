@@ -63,11 +63,13 @@ public class Controller implements Initializable{
 			if(difficulty != null){
 				FXMLLoader loader = new FXMLLoader(getClass().getResource("GameScene.fxml"));
 				root = loader.load();
-			
-				SudokuGame gameState = new SudokuGame(difficulty);
 				
-				SudokuController gameController = loader.getController();
-				gameController.setupPuzzle(gameState, 0);
+				new Thread( ()->{
+					SudokuGame gameState = new SudokuGame(difficulty);
+					SudokuController gameController = loader.getController();
+					gameController.setupPuzzle(gameState, 0);
+				}).start();
+				
 				stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 				scene = new Scene(root);
 				String css = this.getClass().getResource("application.css").toExternalForm();

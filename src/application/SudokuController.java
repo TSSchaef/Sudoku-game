@@ -117,6 +117,12 @@ public class SudokuController implements Initializable{
 		}
 	}
 	
+	public void undo(ActionEvent e) {
+		gameState.undo();
+		outputPuzzle(gameState.getCurrentArr());
+		outputLockedPuzzle(gameState.getGivenArr());
+	}
+	
 	public void pause(ActionEvent event) throws Exception
 	{
 		pauseTimer();
@@ -180,6 +186,9 @@ public class SudokuController implements Initializable{
 				if(puzzleArr[i][j] != '\0') {
 					boxes.get(i).get(j).setText("" + puzzleArr[i][j]);
 					boxes.get(i).get(j).setEditable(true);
+				}
+				else {
+					boxes.get(i).get(j).setText("");
 				}
 			}
 		}
